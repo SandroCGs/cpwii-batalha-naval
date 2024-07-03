@@ -19,7 +19,7 @@ button{
     margin: -2px;
     margin-top: -3px;
     padding: 37px;
-    
+    border-radius: 0px;
 }
 
 button:active{
@@ -27,5 +27,5 @@ button:active{
 }
 
 button:hover{
-background-color: #d1d1d1;
+    background-color: #d1d1d1;
 }
