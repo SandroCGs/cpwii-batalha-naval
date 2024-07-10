@@ -9,23 +9,27 @@
 
 div{
     margin-top: 30px;
-
+    padding: auto;
+    align-items: center;
+    background-color: #9bddf7;
+    width: 655px;
+    height: 652px;
 }
 
 button{
     background-color: lightblue;
     height: 90px;
     width: 90px;
-    margin: -2px;
-    margin-top: -3px;
-    padding: 37px;
-    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid #a6cccc;
 }
 
 button:active{
-    transform: translateY(2px);
+    transform: translateY(3px);
 }
 
 button:hover{
     background-color: #d1d1d1;
+
 }
