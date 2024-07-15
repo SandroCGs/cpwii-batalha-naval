@@ -44,7 +44,13 @@ button{
     border: 1px solid #a6cccc;
 }
 
+
+
 button:active{
+    transform: none;
+}
+
+buttan:active{
     transform: translateY(3px);
 }
 

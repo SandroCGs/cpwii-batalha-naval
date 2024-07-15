@@ -8,20 +8,44 @@ let matriz = [
 [0, 0, 0, 0, 0, 0, 0]
 ];
 
+
 function iniciaJogo() {
-    var linha = Math.random()*5;
-    var coluna = Math.random()*7;
-    if (matriz[linha][coluna] == 0 && matriz[linha+1][coluna+1] == 0 && matriz[linha+2][coluna +2] == 0){
+    
+
+    for (var i = 1; i <= 7; i++) {
+        for (var j = 1; j <= 7; j++) {
+            let id = `${i}${j}`;
+            var button = document.getElementById(id);
+            var img = button.querySelector('img');
+            if (img) {
+                img.src = "/img/marine-waves.png";
+            }
+            document.getElementById(id).disabled = false;
+            document.getElementById(id).style.transform = "translateY(1px)";
+        }
+    }
+
+    for (var i = 0; i < 7; i++) {
+        for (var j = 0; j < 7; j++) {
+            if (matriz [i][j] != 0){
+                matriz[i][j] = 0;
+            }
+        }
+    }
+
+    var linha = Math.floor(Math.random() * 5);
+    var coluna = Math.floor(Math.random() * 7);
+    if (Number(matriz[coluna][linha]) == 0 && Number(matriz[coluna][linha+1]) == 0 && Number(matriz[coluna][linha+2]) == 0){
         for (i=0; i<3; i++){
-            matriz[linha+i][coluna+i] = 1;
+            matriz[coluna][linha+i] = 1;
         }
     }
 }
 
-function alert(){
+function alerta(){
     for(i=0; i<7; i++){
-        for(j=0; i<7; i++){
-            document.alert(matriz[i][j]);
+        for(j=0; j<7; j++){
+            console.log(matriz[i][j]);
         }
     }
     
