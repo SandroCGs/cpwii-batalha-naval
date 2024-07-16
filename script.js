@@ -58,9 +58,15 @@ function alerta(){
 }
 
 function mudaImagem(idEsquerda, idMeio, idDireita){
-    var button = document.getElementById(id);
-    var img = button.querySelector('img');
-    img.src = "/img/copia.png";
+    var buttonEsq = document.getElementById(idEsquerda);
+    var buttonMei = document.getElementById(idMeio);
+    var buttonDir = document.getElementById(idDireita);
+    var imgE = button.querySelector('img');
+    img.src = "/img/navio-esquerda.png";
+    var imgM = button.querySelector('img');
+    img.src = "/img/navio-meio.png";
+    var imgD = button.querySelector('img');
+    img.src = "/img/navio-direita.png";
 }
 
 function tentantivaTiro(id) {
@@ -79,19 +85,13 @@ function tentantivaTiro(id) {
         if (matriz[linha][coluna] == 1){
             matriz[linha][coluna] = 2;
             if (matriz[linha][coluna] == 2 && matriz[linha][coluna+1] == 2 && matriz[linha][coluna+2] == 2){
-                mudaImagem(id);
-                mudaImagem(parseInt(id)+1);
-                mudaImagem(parseInt(id)+2);
+                mudaImagem(id, parseInt(id)+1, parseInt(id)+2);
             }
             else if (matriz[linha][coluna+1] == 2 && matriz[linha][coluna-1] == 2){
-                mudaImagem(parseInt(id)+1);
-                mudaImagem(parseInt(id)-1);
-                mudaImagem(id);
+                mudaImagem(parseInt(id)-1, id, parseInt(id)+1);
             }
             else if (matriz[linha][coluna-1] == 2 && matriz[linha][coluna-2] == 2){
-                mudaImagem(parseInt(id)-2);
-                mudaImagem(parseInt(id)-1);
-                mudaImagem(id);
+                mudaImagem(parseInt(id)-2, parseInt(id)-1, id);
             }
             else {
                 img.src = "/img/marine-hit.png";            
