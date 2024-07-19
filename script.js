@@ -20,7 +20,7 @@ function iniciaJogo() {
             var button = document.getElementById(id);
             var img = button.querySelector('img');
             if (img) {
-                img.src = "/img/marine-waves.png";
+                img.src = "./img/marine-waves.png";
             }
             document.getElementById(id).disabled = false;
             document.getElementById(id).style.transform = "translateY(1px)";
@@ -60,19 +60,19 @@ function alerta(){
 function mudaImagemEsq(idEsquerda){
     var buttonEsq = document.getElementById(idEsquerda);
     var img = buttonEsq.querySelector('img');
-    img.src = "/img/navio-esquerda.png";
+    img.src = "./img/navio-esquerda.png";
 }
 
 function mudaImagemMei(idMeio){
     var buttonMei = document.getElementById(idMeio);
     var img = buttonMei.querySelector('img');
-    img.src = "/img/navio-meio.png";
+    img.src = "./img/navio-meio.png";
 }
 
 function mudaImagemDir(idDireita){
     var buttonDir = document.getElementById(idDireita);
     var img = buttonDir.querySelector('img');
-    img.src = "/img/navio-direita.png";
+    img.src = "./img/navio-direita.png";
 }
 
 
@@ -85,7 +85,7 @@ function tentantivaTiro(id) {
         var button = document.getElementById(id);
         var img = button.querySelector('img');
         if (matriz[linha][coluna] != 1) {
-            img.src = "/img/marine-miss.png";
+            img.src = "./img/marine-miss.png";
             tentativa--;
         }
 
@@ -116,7 +116,7 @@ function tentantivaTiro(id) {
                 mudaImagemDir(id);
             }
             else {
-                img.src = "/img/marine-hit.png";            
+                img.src = "./img/marine-hit.png";            
             }
         }
 
