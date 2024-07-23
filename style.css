@@ -7,7 +7,6 @@
     align-items: center;
 }
 
-
 main{
     display: flex;
     flex-direction: row-reverse;
@@ -43,8 +42,6 @@ button{
     padding: 0px;
     border: 1px solid #a6cccc;
 }
-
-
 
 button:active{
     transform: none;
